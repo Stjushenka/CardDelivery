@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/6g4aee9k4t04dd35/branch/master?svg=true)](https://ci.appveyor.com/project/Stjushenka/carddelivery/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/6g4aee9k4t04dd35?svg=true)](https://ci.appveyor.com/project/Stjushenka/carddelivery)

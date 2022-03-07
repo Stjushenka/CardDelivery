@@ -41,7 +41,7 @@ public class RequestFormTest {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         open("http://localhost:9999");
-        $(".input__control[placeholder='Город']").setValue("К");
+        $(".input__control[placeholder='Город']").setValue("Ка");
         $(byText("Казань")).click();
         $(".icon_name_calendar").click();
         $$("td").find(exactText("18")).click();
