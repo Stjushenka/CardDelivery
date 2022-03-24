@@ -8,16 +8,18 @@ import org.openqa.selenium.Keys;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.Calendar;
 
 
 public class RequestFormTest {
 
     public String dateSetUp(int days) {
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.DATE, days);
-        return dateFormat.format(calendar.getTime());
+        return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
     @Test
@@ -38,19 +40,20 @@ public class RequestFormTest {
     @Test
     public void shouldSendForm1() {
 
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        DateFormat LocalDate = new SimpleDateFormat("dd.MM.yyyy");
 
         open("http://localhost:9999");
         $(".input__control[placeholder='Город']").setValue("Ка");
         $(byText("Казань")).click();
         $(".icon_name_calendar").click();
-        $$("td").find(exactText("18")).click();
+        //$$(byName("calendar__arrow_direction_right")).last().click();
+        $$("td").find(exactText("31")).click();
         $(".input__control[name='name']").setValue("Иванов Иван");
         $(".input__control[name='phone']").setValue("+78889996633");
         $(".checkbox__box").click();
         $(".button").click();
         $(withText("Успешно!")).shouldBe(appear, Duration.ofSeconds(15));
-        $(".notification__content").shouldHave(exactText("Встреча успешно забронирована на " + "18.03.2022"));
+        $(".notification__content").shouldHave(exactText("Встреча успешно забронирована на " + "31.03.2022"));
     }
 
 
