@@ -8,11 +8,9 @@ build: off
 
 install:
 
-  - ps: $App = Start-Process -FilePath java -ArgumentList "-jar ./artifacts/app-card-delivery.jar" -PassThru
+  - ps:
+  - java -jar ./artifacts/app-card-delivery.jar &
 
 build_script:
   - ps: chmod +x gradlew
   - ps: ./gradlew test --info "-Dselenide.headless=true"
-
-on_finish:
-  - ps: Stop-Process -Id $App.Id
