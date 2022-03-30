@@ -45,7 +45,7 @@ public class RequestFormTest {
         $(".input__control[placeholder='Город']").setValue("Ка");
         $(byText("Казань")).click();
         $(".icon_name_calendar").click();
-        $("div.calendar__arrow.calendar__arrow_direction_right").click();
+        //$("div.calendar__arrow.calendar__arrow_direction_right").click();
         $(".input__control[placeholder='Дата встречи']").doubleClick().sendKeys(Keys.BACK_SPACE, meetingDay);
         //$$("td").find(exactText("5")).click();
         $(".input__control[name='name']").setValue("Иванов Иван");
@@ -66,7 +66,7 @@ public class RequestFormTest {
         $(".input__control[placeholder='Город']").setValue("Ка");
         $(byText("Казань")).click();
         $(".icon_name_calendar").click();
-        $("div.calendar__arrow.calendar__arrow_direction_right").click();
+        //$("div.calendar__arrow.calendar__arrow_direction_right").click();
         $(".input__control[placeholder='Дата встречи']").doubleClick().sendKeys(Keys.BACK_SPACE, meetingDay);
         //$$("td").find(exactText("5")).click();
         $(".input__control[name='name']").setValue("Иванов Иван");
