@@ -17,7 +17,7 @@ repositories {
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
-    testImplementation 'com.codeborne:selenide:5.19.0'
+    testImplementation 'com.codeborne:selenide:4.5.12.'
     testImplementation 'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59'
     testImplementation("io.github.bonigarcia:webdrivermanager:5.1.0")
 }
