@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/6g4aee9k4t04dd35/branch/master?svg=true)](https://ci.appveyor.com/project/Stjushenka/carddelivery/branch/master)
+[![Java CI with Gradle](https://github.com/Stjushenka/CardDelivery/actions/workflows/gradle.yml/badge.svg)](https://github.com/Stjushenka/CardDelivery/actions/workflows/gradle.yml)
